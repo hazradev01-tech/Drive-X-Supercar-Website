@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DriveX Car Showroom</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header>
+        <nav class="navbar">
+
+            <div class="logo">
+                Drive<span>X</span>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#cars">Cars</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <button id="themeBtn" class="theme-btn">🌙</button>
+
+        </nav>
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <span class="hero-tag">PREMIUM CAR SHOWROOM</span>
+
+            <h1>Find Your <span>Dream Car</span></h1>
+
+            <p>
+                Discover premium, luxury and performance cars
+                at the best prices.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#cars" class="btn">
+                    Explore Cars
+                </a>
+
+                <a href="#contact" class="outline-btn">
+                    Contact Us
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= SEARCH ================= -->
+
+    <section class="search-section" id="cars">
+
+        <div class="search-box">
+
+            <div class="search-title">
+                <h2>Find Your Perfect Car</h2>
+                <p>Search and filter from our collection</p>
+            </div>
+
+            <div class="search-controls">
+
+                <input type="text" id="searchInput" placeholder="🔎 Search car name...">
+
+                <select id="categoryFilter">
+
+                    <option value="all">All Categories</option>
+                    <option value="Luxury">Luxury</option>
+                    <option value="Sports">Sports</option>
+                    <option value="SUV">SUV</option>
+                    <option value="Sedan">Sedan</option>
+
+                </select>
+
+                <select id="priceFilter">
+
+                    <option value="all">All Prices</option>
+                    <option value="5000000">Under ₹50 Lakh</option>
+                    <option value="10000000">Under ₹1 Crore</option>
+                    <option value="20000000">Under ₹2 Crore</option>
+                    <option value="50000000">Under ₹5 Crore</option>
+
+                </select>
+
+                <select id="sortFilter">
+
+                    <option value="default">Sort By</option>
+                    <option value="low">Price: Low to High</option>
+                    <option value="high">Price: High to Low</option>
+                    <option value="name">Name: A-Z</option>
+
+                </select>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CARS ================= -->
+
+    <section class="cars-section">
+
+        <h2>Our Featured Cars</h2>
+
+        <p class="section-description">
+            Choose from our collection of stylish and powerful vehicles.
+        </p>
+
+        <div class="car-count">
+            <span id="carCount">6</span> cars available
+        </div>
+
+        <div id="carContainer" class="car-container"></div>
+
+        <div id="noCars" class="no-cars">
+            <div>🚘</div>
+            <h3>No Cars Found</h3>
+            <p>Try changing your search or filter.</p>
+        </div>
+
+    </section>
+
+
+    <!-- ================= EMI CALCULATOR ================= -->
+
+    <section class="calculator">
+
+        <div class="calculator-content">
+
+            <div>
+                <span class="small-heading">FINANCE YOUR DREAM</span>
+
+                <h2>Car EMI Calculator</h2>
+
+                <p>
+                    Calculate an estimated monthly EMI for your dream car.
+                </p>
+            </div>
+
+            <div class="calculator-box">
+
+                <label>Car Price</label>
+
+                <input type="number" id="carPrice" placeholder="Example: 5000000">
+
+                <label>Down Payment</label>
+
+                <input type="number" id="downPayment" placeholder="Example: 1000000">
+
+                <label>Loan Interest (%)</label>
+
+                <input type="number" id="interest" value="8.5" step="0.1">
+
+                <label>Loan Period (Years)</label>
+
+                <select id="loanYears">
+
+                    <option value="3">3 Years</option>
+                    <option value="5" selected>5 Years</option>
+                    <option value="7">7 Years</option>
+                    <option value="10">10 Years</option>
+
+                </select>
+
+                <button onclick="calculateEMI()" class="calculate-btn">
+                    Calculate EMI
+                </button>
+
+                <div id="emiResult" class="emi-result">
+                    Your EMI will appear here.
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <section class="about" id="about">
+
+        <div class="about-content">
+
+            <span class="small-heading">ABOUT DRIVEX</span>
+
+            <h2>Drive Your Dream</h2>
+
+            <p>
+                DriveX is a modern car showroom offering a wide range of
+                premium, luxury and performance vehicles. Our goal is to make
+                finding your dream car simple, transparent and enjoyable.
+            </p>
+
+            <div class="stats">
+
+                <div>
+                    <strong>500+</strong>
+                    <span>Cars Sold</span>
+                </div>
+
+                <div>
+                    <strong>15+</strong>
+                    <span>Luxury Brands</span>
+                </div>
+
+                <div>
+                    <strong>10+</strong>
+                    <span>Years Experience</span>
+                </div>
+
+            </div>
+
+            <a href="#contact" class="btn">
+                Contact Us
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CONTACT ================= -->
+
+    <section class="contact" id="contact">
+
+        <span class="small-heading">GET IN TOUCH</span>
+
+        <h2>Contact Us</h2>
+
+        <div class="contact-container">
+
+            <div class="contact-info">
+
+                <h3>Visit Our Showroom</h3>
+
+                <div class="contact-item">
+                    <span>📍</span>
+                    <p>
+                        123 Auto Street,<br>
+                        Kolkata, India
+                    </p>
+                </div>
+
+                <div class="contact-item">
+                    <span>📞</span>
+                    <p>+91 98765 43210</p>
+                </div>
+
+                <div class="contact-item">
+                    <span>✉️</span>
+                    <p>info@drivex.com</p>
+                </div>
+
+                <div class="contact-item">
+                    <span>🕐</span>
+                    <p>Mon - Sat: 9:00 AM - 8:00 PM</p>
+                </div>
+
+            </div>
+
+
+            <form id="contactForm">
+
+                <input type="text" id="name" placeholder="Your Name" required>
+
+                <input type="email" id="email" placeholder="Your Email" required>
+
+                <input type="tel" id="phone" placeholder="Your Phone" required>
+
+                <textarea id="message" placeholder="Tell us which car you are interested in..." rows="5"
+                    required></textarea>
+
+                <button type="submit">
+                    Send Message
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-logo">
+            Drive<span>X</span>
+        </div>
+
+        <p>
+            Premium cars. Premium experience.
+        </p>
+
+        <div class="socials">
+            <span>Instagram</span>
+            <span>Facebook</span>
+            <span>YouTube</span>
+        </div>
+
+        <hr>
+
+        <p>
+            © 2026 DriveX Car Showroom. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- ================= CAR DETAILS MODAL ================= -->
+
+    <div id="carModal" class="modal">
+
+        <div class="modal-content">
+
+            <button class="close-btn" onclick="closeModal()">
+                ×
+            </button>
+
+            <img id="modalImage" src="" alt="Car">
+
+            <div class="modal-info">
+
+                <span id="modalCategory"></span>
+
+                <h2 id="modalTitle"></h2>
+
+                <p id="modalDescription"></p>
+
+                <h3 id="modalPrice"></h3>
+
+                <div class="modal-specs">
+
+                    <div>
+                        <strong>⚙️</strong>
+                        <span>Automatic</span>
+                    </div>
+
+                    <div>
+                        <strong>⛽</strong>
+                        <span>Petrol</span>
+                    </div>
+
+                    <div>
+                        <strong>🚀</strong>
+                        <span>Performance</span>
+                    </div>
+
+                </div>
+
+                <button class="modal-contact" onclick="contactFromModal()">
+                    Enquire Now
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
